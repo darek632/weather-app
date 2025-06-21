@@ -1,5 +1,194 @@
 /* styles.css */
 body {
-    background-color: rebeccapurple;
+    /* background-color: #f77f00; */
+    height: 100vh;
+    background: radial-gradient(circle at center, #aee1f9, #2196F3);
+    font-family: sans-serif;
+    color: black;
+
+
+  }
+
+  * { 
+    padding: 0;
+    margin:0;
+    box-sizing: border-box;
+  }
+
+  #odin-holder { 
+    border: 1px solid green;
+   height: 40%;
+   width: 40%;
+
+  }
+
+  img { 
+    height: 100%;
+    width: 100%;
+    object-fit: contain;
   }
   
+  .main { 
+    height: 100%;
+    gap:20px;
+    border: 1px solid black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* justify-content: center; */
+    padding-top: 5%;
+  }
+
+  #weather-card { 
+    display: grid;
+    gap: 5px;
+    grid-template-columns: 2fr 2fr;
+    grid-template-rows: 1fr 2fr 2fr 2fr;
+    height: 460px;
+    padding: 20px;
+
+  
+    background: rgba(255, 255, 255, 0.15); /* almost see-through white */
+      border-radius: 1rem;
+      border: 10px solid yellow;
+      padding: 2rem;
+      color: black;
+      backdrop-filter: blur(10px); /* frosted-glass effect */
+      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+      /* border: 1px solid rgba(255, 255, 255, 0.2); */
+      max-width: 1000px;
+      min-width: 640px;
+      margin: 2rem auto;
+    
+
+    /* background-color: #10b981;
+    border-radius: 8px;
+    border: 10px solid #dc2626;
+   
+    box-shadow: 3px 3px 3px 0px #C3CCC6;
+    display: grid; */
+}
+
+
+.location { 
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid black;
+  grid-column-start: 1;
+  grid-column-end: 3;
+  font-size: 2rem;
+}
+
+.temperature {
+  font-size: 4rem;
+}
+  
+
+.item { 
+  padding: 0.5rem;
+  border: 1px solid yellow;
+}
+
+.top-row { 
+display: flex;
+gap: 4rem;
+}
+
+/* the bit around the button */
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+input:checked + .slider {
+  background-color: #2196F3;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #2196F3;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
+
+/* Rounded sliders */
+/* .slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+} */
+
+
+img { 
+  height: 100%;
+  width: 100%;
+}
+
+.bg-img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;      /* Fill the space without distortion */
+ opacity: 0.8;          /* Make it see-through */
+  z-index: -1;            /* Push it behind content */
+  pointer-events: none;   /* Prevent the image from capturing clicks */
+}
+  
+#location-search { 
+  height: 2rem;
+  
+}
+
+
+#img-holder { 
+  display: flex;
+  align-items: flex-start;
+}
+
+#weather-icon { 
+  width: 60%;
+  height: auto;
+ 
+}
+
+.item { 
+  border-radius: 10px;
+}
+
+.data-title,.description, .sunrise, .sunset { 
+  font-weight: 900;
+}

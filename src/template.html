@@ -7,6 +7,54 @@
 </head>
 <body>
     
+    <div class="main"> 
+        <div id="background-holder"></div>
+        <!-- <div id="odin-holder"></div> -->
+         <div class="top-row">
+            <form id="search-bar" action="#"> 
+                <input type="search" id="location-search" name="location-search" placeholder="Enter city or country.">
+                <button type="submit"> Search </button>
+            </form>
+            
+            <div>
+                <div>°F or °C </div>
+                <label class="switch">
+                <input type="checkbox" id="temp-change">
+                <span class="slider round"></span>
+                </label>
+            </div>
+            
+        </div>
+        
+       
+        <div id="weather-card">
+            <div class="location item" data-key="location">Bath</div>
+            <div class="temperature item" > <span data-key="tempNow" id="temp-now">15</span> <span class="temp-unit">°F</span></div>
+            <div class="description item" data-key="description"> Cloudy</div>
+            <div class="humidity item"> 
+                <div class="data-title">Humidity:</div>
+                <div class="data" id="humidity-value"><span data-key="humidity">43</span>%</div>
+            </div>
+            <div class="precip-prob item">
+
+                <div class="data-title">Chance of rain:</div>
+                <div class="data" id="precip-value" > <span data-key="precipitationProbability">43%</span>% </div>
+            </div>
+            <div class="weather item"> 
+                <div class="sunrise">Sunrise:</div>
+                <div data-key="sunrise">09:01 </div>
+                <br>
+                <div class="sunset">Sunset:</div>
+                <div data-key="sunset">18:23:01 </div>
+            </div>
+            <div id="img-holder" class="graphic item"> 
+                <img id="weather-icon" src="#" alt="weather icon" />
+            </div>
+            
+        </div>
+        
+    </div>
+    
     
 </body>
 </html>
